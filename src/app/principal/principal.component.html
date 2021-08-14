@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 py-4">
+            <h1 class="display-5">Listado de estudiantes</h1>
+        </div>
+
+        <form class="col-12" (ngSubmit)="enviarPos()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" [(ngModel)]="usuario.nombre" class="form-control" name="nombre" placeholder="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" [(ngModel)]="usuario.direccion" class="form-control" name="direccion" placeholder="direccion">
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+
+        <div class="col-3 mt-2" *ngFor="let u of usuarios">
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.seekpng.com/png/full/356-3562377_personal-user.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{u.nombre}}</h5>
+                    <p class="card-text">Dirección: {{ u.direccion }}</p>
+                    <a href="#" class="btn btn-primary">Editar</a>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
