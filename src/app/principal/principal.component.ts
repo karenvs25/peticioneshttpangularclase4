@@ -31,7 +31,7 @@ export class PrincipalComponent implements OnInit {
   }
 
   editar(id:number):void{
-    console.log("el id es igual a = "+id);g
+    console.log("el id es igual a = "+id);
     this.http.get<estudiante>('https://frozen-meadow-48728.herokuapp.com/uno/'+id)
     .subscribe(response=>{
       this.usuario=response;
