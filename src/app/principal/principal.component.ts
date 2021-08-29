@@ -44,7 +44,7 @@ export class PrincipalComponent implements OnInit {
     this.http.delete<estudiante>('https://frozen-meadow-48728.herokuapp.com/eliminar/'+id)
     .subscribe(response=>{
      // this.usuario=response;
-     alert('Usuario eliminado');
+     alert ('Usuario eliminado');
      window.location.reload();
     });
   
